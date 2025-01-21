@@ -1,0 +1,44 @@
+/* Global Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to top, #f0f8ff, #e6f7ff);
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.flex-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Ensure children take equal space */
+.flex-container>* {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .flex-container>* {
+    flex: none;
+    /* Prevent stretching */
+    width: 100%;
+    /* Take full width */
+  }
+}

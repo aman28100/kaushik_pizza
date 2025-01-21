@@ -1,0 +1,96 @@
+/* Footer Styles */
+.footer {
+    background: #222 url('../picture/bback.jpg') no-repeat center center / cover;
+    /* Ensure the background image covers the footer */
+    color: white;
+    text-align: center;
+    padding: 77px 28px 57px;
+    position: relative;
+    width: 100%;
+    /* clip-path: ellipse(100% 25% at 50% 0); */
+    /* Curved top edge */
+    margin-top: 50px;
+    overflow: hidden;
+    background-size: cover;
+    /* Ensure the image fully covers the area */
+    background-position: center;
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.5);
+    /* Add shadow for depth */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* Add spacing between elements */
+}
+
+.footer-logo {
+    font-size: 2.5rem;
+    font-family: 'Cursive', sans-serif;
+    color: #ff6347;
+    /* Tomato color */
+    margin-left: 130px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    /* Center the links */
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    color: #ff6347;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ffd700;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.social-media {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    /* Center the social media links */
+}
+
+.social-link {
+    color: #ff6347;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .footer-links,
+    .social-media {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        /* Center them on small screens */
+    }
+}

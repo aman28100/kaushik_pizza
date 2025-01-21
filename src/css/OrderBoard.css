@@ -1,0 +1,135 @@
+/* General styling for the order board */
+.order-board {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f3f4f7, #e0e1e6);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    
+}
+
+.order-board h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Styling for the columns representing stages */
+.order-columns {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.stage-column {
+    flex: 1 1 22%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    border: 2px groove #ddd;
+    min-width: 230px;
+    max-width: 250px;
+    transition: transform 0.2s ease;
+    height: 600px;
+    /* Fixed height for scrollable container */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+}
+
+.stage-column:hover {
+    transform: translateY(-5px);
+}
+
+.stage-column h3 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #34495e;
+    font-weight: 700;
+}
+
+/* Individual order card styles */
+.order-card {
+    background-color: #fdfdfd;
+    padding: 20px;
+    border: 3px groove pink;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.order-card:hover {
+    transform: translateY(-8px);
+}
+
+.order-card h4 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.order-card p {
+    margin: 5px 0;
+    color: #7f8c8d;
+}
+
+/* Highlight orders that have been in the stage for more than 3 minutes */
+.highlight-red {
+    border: 2px solid #e74c3c;
+    background-color: #f8d7da;
+}
+
+/* Styling for the 'Next Stage' button */
+.next-stage-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #27ae60;
+    border: none;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.next-stage-btn:hover {
+    background-color: #2ecc71;
+}
+
+/* Add border colors for each stage */
+.order-board .order-columns .stage-column.order-placed {
+    border-color: #3498db;
+}
+
+.order-board .order-columns .stage-column.order-in-making {
+    border-color: #f19604;
+}
+
+.order-board .order-columns .stage-column.order-ready {
+    border-color: #2ecc71;
+}
+
+.order-board .order-columns .stage-column.order-picked {
+    border-color: #e74c3c;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .order-columns {
+        flex-direction: column;
+    }
+
+    .stage-column {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+}
