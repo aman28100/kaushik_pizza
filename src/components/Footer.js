@@ -1,9 +1,17 @@
-import React from 'react';
-import "../css/Footer.css"; // Link the CSS file correctly
+import React from "react";
+import "../css/Footer.css";
+import bback from "../picture/bback.jpg"; // Import the image
 
 const Footer = () => {
+  const footerStyle = {
+    backgroundImage: `url(${bback})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  };
+
   return (
-    <footer className="footer">
+    <footer className="footer" style={footerStyle}>
       <div className="footer-content">
         <h2 className="footer-logo">🍕 Kaushik Pizza</h2>
         <div className="footer-links">
