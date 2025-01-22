@@ -3,12 +3,13 @@
     color: white;
     border-radius: 20px;
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
     position: relative;
     width: 100%;
     margin-top: 50px;
     background-size: cover;
-    background-position: center center;
+    background-position: center;
+    background-repeat: no-repeat;
     box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -19,24 +20,23 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    /* Spacing between elements */
 }
 
 .footer-logo {
     font-size: 2.5rem;
     font-family: "Cursive", sans-serif;
     color: #ff6347;
-    margin-left: 300px;
-    /* Tomato color */
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .footer-links {
     display: flex;
-    gap: 30px;
-    /* justify-content: center; */
-    margin-left: 350px;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
 
 .footer-link {
@@ -55,49 +55,23 @@
     cursor: pointer;
 }
 
-.footer-link i {
-    font-size: 14px;
-}
-
 .footer-link:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-@media (max-width: 768px) {
-    .footer-links {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .footer-logo {
-        font-size: 2rem;
-    }
-
-    .logo-pizza {
-        font-size: 2.5rem;
-    }
-
-    .social-media {
-        gap: 20px;
-    }
-}
-
 .social-media {
     display: flex;
     gap: 20px;
-    /* Spacing between social media links */
     justify-content: center;
+    margin-top: 20px;
 }
 
 .social-link {
     color: #ff6347;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 24px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -108,13 +82,12 @@
 
 .copyright {
     margin-top: 20px;
-    font-size: 17px;
+    font-size: 14px;
     color: #ccc;
     text-align: center;
-    margin-left: 300px;
 }
 
-
+/* Responsive Styles */
 @media (max-width: 1024px) {
     .footer-content {
         padding: 0 15px;
@@ -131,36 +104,53 @@
 }
 
 @media (max-width: 768px) {
+    .footer-content {
+        align-items: center;
+    }
 
     .footer-links,
     .social-media {
         flex-direction: column;
         gap: 10px;
-        align-items: center;
-       
     }
 
     .footer-logo {
         font-size: 1.8rem;
     }
+
+    .footer-link {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
 }
 
 @media (max-width: 480px) {
     .footer {
-        padding: 60px 10px;
+        padding: 40px 10px;
     }
 
     .footer-logo {
         font-size: 1.5rem;
     }
 
-    .footer-link,
+    .footer-link {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
     .social-link {
-        font-size: 16px;
+        font-size: 20px;
     }
 }
 
+/* Background Image Resizing */
+.footer {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+/* Page Content Styles */
 .page-content {
     padding: 20px;
     text-align: center;
@@ -179,7 +169,6 @@
     color: #ff6347;
     margin-bottom: 10px;
 }
-
 
 p {
     font-size: 1rem;
@@ -212,41 +201,7 @@ ul li a:hover {
     text-decoration: underline;
 }
 
-
-.social-media {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-    margin-left: 300px;
-}
-
-.social-link {
-    color: #25d366;
-    font-size: 32px;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-link:nth-child(2) {
-    color: #007bff;
-}
-
-.social-link:nth-child(3) {
-    color: #3b5998;
-}
-
-.social-link:nth-child(4) {
-    color: #c13584;
-    
-}
-
-
-.social-link:hover {
-    transform: scale(1.3);
-    color: #ffd700;
-}
-
+/* Animated Emoji */
 @keyframes moveEmoji {
     0% {
         transform: translateY(0);
@@ -274,4 +229,36 @@ ul li a:hover {
     display: inline-block;
     animation: moveEmoji 3s infinite ease-in-out;
     cursor: pointer;
+}
+
+.social-link {
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:nth-child(1) {
+    color: #25d366;
+    /* WhatsApp green */
+}
+
+.social-link:nth-child(2) {
+    color: #007bff;
+    /* Twitter blue */
+}
+
+.social-link:nth-child(3) {
+    color: #3b5998;
+    /* Facebook blue */
+}
+
+.social-link:nth-child(4) {
+    color: #c13584;
+    /* Instagram gradient */
+}
+
+.social-link:hover {
+    transform: scale(1.3);
+    color: #ffd700;
+    /* Golden color on hover */
 }
