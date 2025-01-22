@@ -1,12 +1,11 @@
-import React, { useState, useContext, useRef } from 'react';
+import React, { useState, useContext } from 'react';
 import PizzaContext from '../context/PizzaContext';
 import '../css/OrderForm.css';
 
 const OrderForm = () => {
   const { addOrder, orders } = useContext(PizzaContext);
   const [formData, setFormData] = useState({ type: 'Veg', size: 'Large', base: 'Thin' });
-  const [showSuccessVideo, setShowSuccessVideo] = useState(false);
-  const videoRef = useRef(null);
+  const [showSuccessGif, setShowSuccessGif] = useState(false);
 
   const totalOrdersInProgress = orders.filter((order) => order.stage !== 'Order Picked').length;
 
@@ -19,16 +18,14 @@ const OrderForm = () => {
         stage: 'Order Placed',
         startTime: Date.now(),
       });
-      setShowSuccessVideo(true);
+      setShowSuccessGif(true);
+
+      // Hide the GIF automatically after a few seconds
+      setTimeout(() => {
+        setShowSuccessGif(false);
+      }, 2000); // 2 seconds
     } else {
       alert('Not taking any orders for now!');
-    }
-  };
-
-  const handleTimeUpdate = () => {
-    if (videoRef.current && videoRef.current.currentTime >= 2) {
-      videoRef.current.pause(); // Stop the video after 2 seconds
-      setShowSuccessVideo(false); // Hide the video
     }
   };
 
@@ -62,16 +59,13 @@ const OrderForm = () => {
       </select>
       <button type="submit" className="submit-button">Place Order</button>
 
-      {/* Success Video */}
-      {showSuccessVideo && (
-        <div className="success-video-container">
-          <video
-            ref={videoRef}
-            src="/Video/Pizza Ordered.mp4"
-            className="success-video"
-            autoPlay
-            muted
-            onTimeUpdate={handleTimeUpdate}
+      {/* Success GIF */}
+      {showSuccessGif && (
+        <div className="success-gif-container">
+          <img 
+            src="/Video/pizza.gif" 
+            className="success-gif" 
+            alt="Order Placed Successfully" 
           />
         </div>
       )}

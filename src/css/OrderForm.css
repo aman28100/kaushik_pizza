@@ -73,12 +73,13 @@
     transform: scale(0.97);
 }
 
-.success-video-container {
+
+.success-gif-container {
     margin-top: 20px;
     text-align: center;
 }
 
-.success-video {
+.success-gif {
     width: 100%;
     max-width: 300px;
     border-radius: 8px;
