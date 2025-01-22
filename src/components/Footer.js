@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/Footer.css";
-import bback from "../picture/bback.jpg"; // Background image import
+import bback from "../picture/bback.jpg";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Footer = ({ onLinkClick }) => {
   const footerStyle = {
@@ -11,17 +12,35 @@ const Footer = ({ onLinkClick }) => {
   };
 
   return (
+    <>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
     <footer className="footer" style={footerStyle}>
       <div className="footer-content">
-        <h2 className="footer-logo">🍕 Kaushik Pizza</h2>
-        <div className="footer-links">
-          <span className="footer-link" onClick={() => onLinkClick(<PrivacyPolicy />)}>
+<h2 className="footer-logo">
+            <span className="pizza-emoji">🍕</span> 
+            <span className="restaurant-name">Kaushik Pizza</span>
+          </h2>
+          <div className="footer-links">
+          <span
+            className="footer-link"
+            onClick={() => onLinkClick(<PrivacyPolicy />)}
+          >
             Privacy Policy
           </span>
-          <span className="footer-link" onClick={() => onLinkClick(<TermsOfService />)}>
+          <span
+            className="footer-link"
+            onClick={() => onLinkClick(<TermsOfService />)}
+          >
             Terms of Service
           </span>
-          <span className="footer-link" onClick={() => onLinkClick(<ContactUs />)}>
+          <span
+            className="footer-link"
+            onClick={() => onLinkClick(<ContactUs />)}
+          >
             Contact Us
           </span>
         </div>
@@ -40,9 +59,9 @@ const Footer = ({ onLinkClick }) => {
           <a href="tel:+917464020301" className="social-link" aria-label="Call">
             <i className="fas fa-phone-alt"></i>
           </a>
-         
+
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/aman.kaushik.2810?mibextid=ZbWKwL"
             className="social-link"
             target="_blank"
             rel="noopener noreferrer"
@@ -52,7 +71,7 @@ const Footer = ({ onLinkClick }) => {
           </a>
           {/* Instagram */}
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/kaushik_aman?igsh=aTZtdWt3ejljOGh6"
             className="social-link"
             target="_blank"
             rel="noopener noreferrer"
@@ -64,16 +83,18 @@ const Footer = ({ onLinkClick }) => {
         <p className="copyright">© 2025 Kaushik Pizza. All rights reserved.</p>
       </div>
     </footer>
+    </>
   );
 };
 
-// Placeholder components for modal content
+
 const PrivacyPolicy = () => (
   <div>
     <h1>Privacy Policy</h1>
     <p>
-      At Kaushik Pizza, we value your privacy. Any data you provide will be securely stored and used only for improving
-      our services. Your personal information will never be shared with third parties without your consent.
+      At Kaushik Pizza, we value your privacy. Any data you provide will be
+      securely stored and used only for improving our services. Your personal
+      information will never be shared with third parties without your consent.
     </p>
   </div>
 );
@@ -82,8 +103,9 @@ const TermsOfService = () => (
   <div>
     <h1>Terms of Service</h1>
     <p>
-      Welcome to Kaushik Pizza! By using our website, you agree to follow our policies, including proper usage of our
-      services, respecting intellectual property, and adhering to all applicable laws.
+      Welcome to Kaushik Pizza! By using our website, you agree to follow our
+      policies, including proper usage of our services, respecting intellectual
+      property, and adhering to all applicable laws.
     </p>
   </div>
 );
@@ -91,7 +113,10 @@ const TermsOfService = () => (
 const ContactUs = () => (
   <div>
     <h1>Contact Us</h1>
-    <p>We'd love to hear from you! Feel free to reach out with any questions or feedback at:</p>
+    <p>
+      We'd love to hear from you! Feel free to reach out with any questions or
+      feedback at:
+    </p>
     <ul>
       <li>Email: support@kaushikpizza.com</li>
       <li>Phone: +91 7464020301</li>

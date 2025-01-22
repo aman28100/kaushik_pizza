@@ -5,7 +5,7 @@ import "../css/OrderBoard.css";
 const stages = ["Order Placed", "Order in Making", "Order Ready", "Order Picked"];
 
 const OrderBoard = () => {
-  const { orders, updateOrderStage, cancelOrder, deliveredCount } = useContext(PizzaContext);
+  const { orders, updateOrderStage} = useContext(PizzaContext);
   const [timeElapsed, setTimeElapsed] = useState({});
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const OrderBoard = () => {
       setTimeElapsed(updatedTimes);
     }, 1000);
 
-    return () => clearInterval(timer); // Clean up interval on unmount
+    return () => clearInterval(timer); 
   }, [orders]);
 
   const totalOrdersInProgress = orders.filter(

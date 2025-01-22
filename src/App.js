@@ -32,7 +32,7 @@ function App() {
             <MainSection />
           </div>
           <OrderBoard />
-          <Footer onLinkClick={handlePopup} /> {/* Pass handlePopup as a prop */}
+          <Footer onLinkClick={handlePopup} />
           {popupContent && <Popup content={popupContent} onClose={closePopup} />}
         </div>
       </Router>

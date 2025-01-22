@@ -20,10 +20,9 @@ const OrderForm = () => {
       });
       setShowSuccessGif(true);
 
-      // Hide the GIF automatically after a few seconds
       setTimeout(() => {
         setShowSuccessGif(false);
-      }, 2000); // 2 seconds
+      }, 2000);
     } else {
       alert('Not taking any orders for now!');
     }
@@ -59,7 +58,6 @@ const OrderForm = () => {
       </select>
       <button type="submit" className="submit-button">Place Order</button>
 
-      {/* Success GIF */}
       {showSuccessGif && (
         <div className="success-gif-container">
           <img 

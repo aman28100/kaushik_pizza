@@ -25,14 +25,12 @@ const OrderCard = ({ order, updateOrderStage, markOrderPicked }) => {
       </div>
 
       <div className="order-actions">
-        {/* Show the "Next Stage" button for all stages except "Order Ready" and "Order Picked" */}
         {order.stage !== 'Order Ready' && order.stage !== 'Order in Making' && (
           <button className="action-button" onClick={() => updateOrderStage(order.id)}>
             Next Stage
           </button>
         )}
 
-        {/* Show the "Mark as Picked" button when the order is in "Order Ready" */}
         {order.stage === 'Order Ready' && (
           <button className="action-button" onClick={() => markOrderPicked(order.id)}>
             Mark as Picked

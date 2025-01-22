@@ -1,9 +1,7 @@
-/* General styling for the order board */
 .order-board {
     font-family: 'Arial', sans-serif;
     margin: 20px;
     padding: 20px;
-/* background: linear-gradient(135deg, #a8edea, #fed6e3); */
 background: linear-gradient(135deg, #87ceeb, #98fb98, #ffb6c1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 border-radius: 12px;
@@ -18,7 +16,7 @@ border: 1px groove #11d54b;
     font-weight: 600;
 }
 
-/* Styling for the columns representing stages */
+
 .order-columns {
     display: flex;
     gap: 30px;
@@ -52,7 +50,6 @@ border: 1px groove #11d54b;
     font-weight: 700;
 }
 
-/* Individual order card styles */
 .order-card {
     background-color: #fdfdfd;
     padding: 20px;
@@ -78,13 +75,13 @@ border: 1px groove #11d54b;
     color: #7f8c8d;
 }
 
-/* Highlight orders that have been in the stage for more than 3 minutes */
+
 .highlight-red {
     border: 2px solid #e74c3c;
     background-color: #f8d7da;
 }
 
-/* Styling for the 'Next Stage' button */
+
 .next-stage-btn {
     display: block;
     width: 100%;
@@ -103,7 +100,7 @@ border: 1px groove #11d54b;
     background-color: #2ecc71;
 }
 
-/* Add border colors for each stage */
+
 .order-board .order-columns .stage-column.order-placed {
     border-color: #3498db;
 }
@@ -120,7 +117,7 @@ border: 1px groove #11d54b;
     border-color: #e74c3c;
 }
 
-/* Media query for smaller screens */
+
 @media (max-width: 768px) {
     .order-columns {
         flex-direction: column;

@@ -26,31 +26,65 @@
     font-size: 2.5rem;
     font-family: "Cursive", sans-serif;
     color: #ff6347;
+    margin-left: 300px;
     /* Tomato color */
     margin-bottom: 20px;
 }
 
 .footer-links {
     display: flex;
-    gap: 20px;
-    /* Spacing between links */
-    justify-content: center;
+    gap: 30px;
+    /* justify-content: center; */
+    margin-left: 350px;
     flex-wrap: wrap;
-    /* Allow wrapping on smaller screens */
 }
 
 .footer-link {
-    color: #ff6347;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease, transform 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-link i {
+    font-size: 14px;
 }
 
 .footer-link:hover {
-    color: #ffd700;
-    /* Gold color on hover */
-    text-decoration: underline;
-    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-logo {
+        font-size: 2rem;
+    }
+
+    .logo-pizza {
+        font-size: 2.5rem;
+    }
+
+    .social-media {
+        gap: 20px;
+    }
 }
 
 .social-media {
@@ -74,12 +108,13 @@
 
 .copyright {
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 17px;
     color: #ccc;
     text-align: center;
+    margin-left: 300px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
     .footer-content {
         padding: 0 15px;
@@ -102,7 +137,7 @@
         flex-direction: column;
         gap: 10px;
         align-items: center;
-        /* Center items for small screens */
+       
     }
 
     .footer-logo {
@@ -142,7 +177,6 @@
 
 .page-content h1 {
     color: #ff6347;
-    /* Tomato color */
     margin-bottom: 10px;
 }
 
@@ -184,36 +218,60 @@ ul li a:hover {
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
+    margin-left: 300px;
 }
 
 .social-link {
     color: #25d366;
-    /* Default WhatsApp Green */
     font-size: 32px;
-    /* Increased size */
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-link:nth-child(2) {
     color: #007bff;
-    /* Call Icon Blue */
 }
 
 .social-link:nth-child(3) {
     color: #3b5998;
-    /* Facebook Blue */
 }
 
 .social-link:nth-child(4) {
     color: #c13584;
-    /* Instagram Pink */
+    
 }
 
 
 .social-link:hover {
     transform: scale(1.3);
-    /* Slightly larger on hover */
     color: #ffd700;
-    /* Gold color on hover for all icons */
+}
+
+@keyframes moveEmoji {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    75% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.pizza-emoji {
+    font-size: 2.5rem;
+    display: inline-block;
+    animation: moveEmoji 3s infinite ease-in-out;
+    cursor: pointer;
 }
